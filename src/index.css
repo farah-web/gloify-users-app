@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --primary-color:#3498db;
+  --brand-color:#565387;
+  --white-color:#fff;
+  --card-color:#93c8eb;
+  --border-color:rgba(121, 121, 121, 0.5);
 }
+.navbar{
+  background-color: var(--white-color) !important;
+}
+
+.navbar-brand{
+  font-size: 1.5rem !important;
+  color: var(--brand-color);
+  font-weight: bolder;
+}
+
+.navbar a{
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.menu_active{
+  font-weight:bolder;
+  border-bottom: 1px solid var(--brand-color);
+}
+
+.navbar a:hover{
+  color:var(--primary-color) !important;
+}
+
+.profile-block{
+  height:60vh;
+  width:100%;
+ 
+  }
+
+.profile-block-txt{
+  height:100%;
+  animation:txt-load 0.5s ease-in-out;
+
+}
+
+@keyframes txt-load {
+  0%{
+    transform: translateX(-100%);
+  }
+ 100%{
+    transform: translateX(0);
+  }
+}
+
+.profile-block-img{
+  height:100%;
+  animation:img-load 0.5s ease-in-out;
+}
+
+@keyframes img-load {
+  0%{
+    transform: translateX(100%);
+  }
+ 100%{
+  transform: translateX(0);
+  }
+}
+
+.img-profile{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+ 
+}
+.brand-name{
+    color:var(--primary-color);
+ }
+
+
+.titleSize{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.textSize{
+   font-size: 14px;
+}
+.id-align{
+   text-align: right !important;
+}
+
+.btnclass{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.btn-card{
+  width:80%;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color:var(--primary-color);
+  border:1px solid var(--primary-color);
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.btn-card:hover{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+   }
+
+ .imgBorder{
+    border:10px solid var(--primary-color);
+    border-radius: 10px;
+  }
+
+  .card:hover{
+    transform:scale(1);
+    box-shadow: 1px 1px 10px 0.5px var(--border-color);
+    background-color: var(--card-color);
+}
+
